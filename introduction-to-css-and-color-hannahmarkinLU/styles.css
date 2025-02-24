@@ -1,0 +1,209 @@
+body { 
+    font-family: Verdana, sans-serif; 
+    background-color: aliceblue;
+}
+
+h1, h2 { 
+    color: slateblue; 
+}
+
+nav { 
+    background-color: slateblue;
+    background-size: cover;
+    padding: 10px;
+    text-align: center; 
+}
+
+nav ul { 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li { 
+    display: inline;
+    margin: 20px; 
+}
+
+nav ul li a { 
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    text-decoration: none; 
+}
+
+nav ul li a:hover { 
+    color: lavender; 
+}
+
+.homeheader {
+    color: slateblue;
+    display: flex;
+    justify-content: center;
+}
+
+.homebody {
+    color: darkslateblue;
+    background-color: lavender;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 800px;
+}
+
+.aboutmenav {
+    background-color: hotpink
+}
+
+.aboutmeheader {
+    color: hotpink;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutmebody1 {
+    color: hotpink;
+    background-color: lavenderblush;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 800px;
+}
+
+.aboutmebody2 {
+    color: lavenderblush;
+    background-color: hotpink;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 800px;
+}
+
+.resumebg {
+    background-color:rgba(0, 0, 0,)
+}
+
+.resumenav {
+    background-color: rgb(239, 202, 80)
+}
+
+.resumeheader {
+    color: black
+}
+
+.resumesubheader {
+    color: black
+}
+
+.resumesection {
+    margin-bottom: 20px;
+}
+
+.work-experience, .education {
+    margin-left: 20px;
+}
+
+.contactmenav {
+    background-color:rgb(213, 29, 29)
+}
+
+.contactmeheader {
+    color:rgb(213, 29, 29)
+}
+
+.labelyellow {
+    color:rgb(239, 202, 80)
+}
+
+.inputyellow {
+    background-color:rgb(252, 247, 225)
+}
+
+.labelgreen{
+    color:rgb(36, 212, 74)
+}
+
+.inputgreen {
+    background-color:rgb(220, 255, 212)
+}
+
+.labelblue {
+    color:rgb(27, 64, 188)
+}
+
+.inputblue {
+    background-color:rgb(204, 212, 254)
+}
+
+.labelpurple {
+    color:rgb(81, 41, 176)
+}
+
+.inputpurple {
+    background-color:rgb(223, 199, 253)
+}
+
+.form-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 500px;
+}
+.form-container label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center
+}
+.form-container textarea {
+    height: 150px;
+    resize: vertical;
+}
+.form-container input[type="submit"] {
+    background-color: hotpink;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 15px;
+}
+.form-container input[type="submit"]:hover {
+    background-color: darkslateblue;
+}
