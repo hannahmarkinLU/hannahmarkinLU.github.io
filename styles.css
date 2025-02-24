@@ -1,0 +1,175 @@
+body { 
+    font-family: Verdana, sans-serif
+}
+
+/* For phones/tablets */
+@media (max-width: 1024px) {
+    p {
+        font-size: 18px;
+    }
+    
+    nav {
+        padding: 20px;
+    }
+
+    ul {
+        left: 0;
+        top: 50%;
+        text-align: center;
+        display: block;
+        list-style-type: none;
+        height: 100px;
+      }
+      li {
+        display: inline-block;
+        height: 100%;
+      }
+      li a {
+        display: inline-block;
+        line-height: 100px;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-decoration: none;
+        margin: 0;
+        height: 100%;
+      }
+
+    .header-class {
+        width: 90%;
+    }
+
+    .form-class {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .button-class {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .image-class {
+        width: 90%;
+        border-width: 3px;
+    }
+}
+
+nav { 
+    background-size: cover;
+    padding: 10px;
+    text-align: center; 
+}
+
+nav ul { 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li { 
+    display: inline;
+    margin: 20px; 
+}
+
+nav ul li a { 
+    color: white;
+    padding: 8px 12px;
+}
+
+.body-class {
+    background-color: #f2eee9;
+}
+
+.header-class {
+    background-color:#f9b8af;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.nav-class {
+    background-color: #00408c;
+    color: #96add6;
+    text-decoration: none;
+}
+
+.nav-link-class {
+    color: #96add6;
+}
+
+.active-nav-link-class {
+    font-weight: bold;
+    color: #96add6;
+}
+
+.title-class,
+.section-title-class {
+    color: #e85234;
+}
+
+.text-class {
+    color: #00408c;
+}
+
+.cite-class {
+    color: #96add6;
+}
+
+.faq-question-class {
+    color: #00408c;
+}
+
+.image-class {
+    border-style: solid;
+    border-width: 6px;
+    border-color: #96add6;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.form-class {
+    background-color: #96add6;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.label-class {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    color: #00408c;
+}
+
+.input-class {
+    width: 96%;
+    padding: 8px;
+    margin-top: 5px;
+    display: flex;
+}
+
+.button-class {
+    background-color: #f9b8af;
+    color: #e85234;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.button-class:hover {
+    background-color: #e85234;
+    color: #f9b8af;
+}
+
+.footer-class {
+    color: #96add6;
+    background-color: #00408c;
+}
