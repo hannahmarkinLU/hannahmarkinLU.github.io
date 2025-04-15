@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Charities List</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   </head>
+   <body class="body-class">
+      <a href="index.html">
+         <div class="header-container">
+            <div class="header-image-wrapper">
+               <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/HelpHub%20Logo.png" alt="HelpHub Logo" height=100>
+            </div>
+            <div class="nav-wrapper">
+               <nav>
+                  <ul>
+                     <li>
+      <a href="charitieslist.html" class="active-nav-link-class">CHARITIES LIST</a>
+      </li>
+      <li>
+      <a href="contactus.html" class="nav-link-class">CONTACT US</a>
+      </li>
+      <li>
+      <a href="login.html" class="nav-link-class">LOG IN</a>
+      </li>
+      </ul>
+      </nav>
+      </div>
+      </div>
+      <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/charities%20list.png" alt="Volunteers bagging groceries" width=100%>
+      <br>
+      <div class="charity-card margins">
+         <div class="charity-image">
+            <a href="habitatla.html">
+            <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/habitat%20la%20logo.png" alt="Habitat for Humanity Logo" height="150">
+            </a>
+         </div>
+         <div class="charity-details">
+            <a href="habitatla.html" class="charity-link">
+               <h2>Habitat for Humanity of Greater Los Angeles</h2>
+            </a>
+            <h3>Los Angeles, CA</h3>
+            <p>
+               Habitat for Humanity of Greater Los Angeles (Habitat LA) builds and repairs homes in partnership with hardworking, low income families and individuals. We offer a hand up, not a hand out, providing a once-in-a-lifetime opportunity to build a long-term investment for the future.
+            </p>
+         </div>
+      </div>
+      <div class="charity-card margins">
+         <div class="charity-image">
+            <a href="newyorkcares.html">
+            <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/new%20york%20cares%20logo.png" alt="New York Cares Logo" height="150">
+            </a>
+         </div>
+         <div class="charity-details">
+            <a href="newyorkcares.html" class="charity-link">
+               <h2>New York Cares</h2>
+            </a>
+            <h3>New York, NY</h3>
+            <p>We provide year-round volunteer opportunities for New Yorkers like you. Projects take place across the city in the following areas:</p>
+            <ul class="text-class">
+               <li>Educating children, teens, and adults</li>
+               <li>Serving those impacted by hunger and homelessness</li>
+               <li>Health and wellness for seniors and other vulnerable groups</li>
+               <li>Caring for public parks, community gardens, and green spaces</li>
+            </ul>
+         </div>
+      </div>
+      <div class="charity-card margins">
+         <div class="charity-image">
+            <a href="pawschicago.html">
+            <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/paws%20chicago%20logo.png" alt="PAWS Chicago Logo" height="150">
+            </a>
+         </div>
+         <div class="charity-details">
+            <a href="pawschicago.html" class="charity-link">
+               <h2>PAWS Chicago</h2>
+            </a>
+            <h3>Chicago, IL</h3>
+            <p>
+               Helping homeless pets is just as rewarding for you as it is for them. Maybe more. For every walk, you get unbridled tail wags. For every clean bed, eyes filled with gratitude. For every meal, a happy head bump. Volunteer today and help us continue to save lives and expand services for these incredible animals. It takes a village to fulfill the mission of a No Kill Chicago. We couldn't do this without you.
+            </p>
+         </div>
+      </div>
+      <div id="opportunitiesContainer" class="opportunities-container"></div>
+      <div class="button-container">
+         <button id="viewMoreBtn" class="view-more center">View More Opportunities...</button>
+      </div>
+      <footer class="footer-class">
+         <p>©2025 by HelpHub. All rights reserved.</p>
+      </footer>
+      <script>
+         document.getElementById('viewMoreBtn').addEventListener('click', function() {
+         loadOpportunities('https://www.volunteerconnector.org/api/search/?format=json');
+         // Remove the 'View More Opportunities...' button after click
+         this.remove();
+         });
+         
+         function loadOpportunities(url) {
+         const container = document.getElementById('opportunitiesContainer');
+         
+         // Show loading state
+         container.style.display = 'block';
+         container.innerHTML = '<div class="loading">Loading opportunities...</div>';
+         
+         // Add timestamp to avoid caching issues
+         const apiUrl = url + (url.includes('?') ? '&' : '?') + 'timestamp=' + new Date().getTime();
+         
+         // Fetch API request
+         fetch(apiUrl, {
+         headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+         }
+         })
+         // Handle response
+         .then(response => {
+         const contentType = response.headers.get('content-type');
+         // Validate JSON response
+         if (!contentType || !contentType.includes('application/json')) {
+         // Handle non-JSON responses
+            return response.text().then(text => {
+                throw new Error(`Expected JSON but got: ${text.substring(0, 100)}...`);
+            });
+         }
+         return response.json();
+         })
+         .then(data => {
+         // Check if response data is valid, contians a 'results' property, and contains at least 1 item
+         if (data && data.results && data.results.length > 0) {
+            let html = '<div class="opportunities-wrapper">';
+            data.results.forEach(opportunity => {
+                const fullDescription = opportunity.description || 'No description available.';
+                // Cuts off descriptions after 75 words
+                const wordArray = fullDescription.split(/\s+/);
+                const truncatedDescription = wordArray.length > 75 
+                    ? wordArray.slice(0, 75).join(' ') + '...' 
+                    : fullDescription;
+         
+               // Formats the loaded opportunities the same as the list above
+                html += `
+                <div class="charity-card margins">
+                    <div class="charity-image">
+                        <a href="${opportunity.url}" target="_blank">
+                            <img src="${opportunity.organization?.logo ? 'https:' + opportunity.organization.logo : '#'}" 
+                                 alt="${opportunity.organization?.name || 'Volunteer Opportunity'}" 
+                                 height="150">
+                        </a>
+                    </div>
+                    <div class="charity-details">
+                        <a href="${opportunity.url}" target="_blank" class="charity-link">
+                            <h2>${opportunity.title}</h2>
+                        </a>
+                        <h3>${opportunity.audience?.regions?.[0] || 'Multiple Locations'}</h3>
+                        <p>${truncatedDescription}</p>
+                    </div>
+                </div>
+                `;
+            });
+            
+            // Add pagination buttons
+            if (data.next || data.previous) {
+                html += `
+                <div class="pagination-buttons">
+                    ${data.previous ? 
+                        `<button class="pagination-btn" data-url="${data.previous}">← Previous</button>` : ''}
+                    ${data.next ? 
+                        `<button class="pagination-btn" data-url="${data.next}">Next →</button>` : ''}
+                </div>
+                `;
+            }
+            
+            html += '</div>';
+            container.innerHTML = html;
+            
+            // Add event listeners to pagination buttons
+            document.querySelectorAll('.pagination-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    loadOpportunities(this.getAttribute('data-url'));
+                });
+            });
+         // Displayed if no opportunities are found
+         } else {
+            container.innerHTML = '<p>No volunteer opportunities found at this time.</p>';
+         }
+         })
+         // Displayed if there is an error fetching from the API
+         .catch(error => {
+         console.error('Error fetching opportunities:', error);
+         container.innerHTML = '<p>Sorry, we couldn\'t load volunteer opportunities at this time.</p>';
+         });
+         }
+      </script>
+   </body>
+</html>

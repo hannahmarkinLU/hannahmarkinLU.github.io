@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Habitat LA</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   </head>
+   <body class="body-class">
+      <a href="index.html">
+         <div class="header-container">
+            <div class="header-image-wrapper">
+               <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/HelpHub%20Logo.png" alt="HelpHub Logo" height=100>
+            </div>
+            <div class="nav-wrapper">
+               <nav>
+                  <ul>
+                     <li>
+      <a href="charitieslist.html" class="nav-link-class">CHARITIES LIST</a>
+      </li>
+      <li>
+      <a href="contactus.html" class="nav-link-class">CONTACT US</a>
+      </li>
+      <li>
+      <a href="login.html" class="nav-link-class">LOG IN</a>
+      </li>
+      </ul>
+      </nav>
+      </div>
+      </div>
+      <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/habitat%20la.png" alt="Volunteers at Habitat LA" width=100%>
+      <div class="margins">
+         <div class="text-class">
+            <br>
+            <p>Habitat for Humanity of Greater Los Angeles (Habitat LA) builds and repairs homes in partnership with hardworking, low income families and individuals. We offer a hand up, not a hand out, providing a once-in-a-lifetime opportunity to build a long-term investment for the future.</p>
+            <br>
+            <div class="slideshow-container">
+               <div class="mySlides fade">
+                  <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/habitatla1.jpg" style="width:100%" alt="Volunteers and customers at ReStore">
+               </div>
+               <div class="mySlides fade">
+                  <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/habitatla2.jpg" style="width:100%" alt="Family standing in front of their house built by Habitat LA">
+               </div>
+               <div class="mySlides fade">
+                  <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/habitatla3.jpg" style="width:100%" alt="Volunteers constructing a house">
+               </div>
+               <a class="prev" onclick="plusSlides(-1)">❮</a>
+               <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+               <span class="dot"></span> 
+               <span class="dot"></span> 
+               <span class="dot"></span> 
+            </div>
+            <h1 class="center header-margins">Available Volunteer Opportunities</h1>
+            <h3>
+               Wildfire Relief
+            </h3>
+            <p>The Los Angeles wildfires have torn through communities, leaving thousands of families devastated and without a home. While first responders address immediate needs, we are preparing for the work ahead to provide lasting solutions for affected families.</p>
+            <h3>
+               Construction
+            </h3>
+            <p>We love our construction volunteers! Building homes is what Habitat is all about, and we are so thankful for everyone in LA who is ready to help. Construction volunteers participate in all stages of building or renovating a home.</p>
+            <h3>
+               ReStores
+            </h3>
+            <p>Our three ReStores are a unique part of Habitat LA. Volunteering here in one of our home improvement thrift stores is a great way to participate in our mission. If you are looking for a regular volunteer opportunity, working in one of our ReStores is the perfect option! ReStores also welcome groups of friends who want to work together.</p>
+            <div class="button-container">
+               <button id="volunteer-btn" class="volunteer-now">Volunteer Now!</button>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      <footer class="footer-class">
+         <p>©2025 by HelpHub. All rights reserved.</p>
+      </footer>
+      <div id="volunteer-modal" class="modal">
+         <div class="modal-content">
+            <h3>Join Habitat LA's Team</h3>
+            <form id="volunteer-form">
+               <input type="name" id="name" name="name" class="form-input" placeholder="Your Name">
+               <input type="email" id="email" name="email" class="form-input" placeholder="Email">
+               <select class="volunteer-form-input">
+                  <option value="">Interested in...</option>
+                  <option>Wilfire Relief</option>
+                  <option>Construction</option>
+                  <option>Restore</option>
+               </select>
+               <input type="submit" value="Submit" class="form-submit">
+            </form>
+         </div>
+      </div>
+      <a href="javascript:history.back()" class="back-arrow" aria-label="Go back">
+      <i class="fas fa-arrow-left"></i>
+      </a>
+      <script src="helphub.js"></script>
+   </body>
+</html>

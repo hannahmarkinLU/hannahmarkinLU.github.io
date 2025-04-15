@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>New York Cares</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   </head>
+   <body class="body-class">
+      <a href="index.html">
+         <div class="header-container">
+            <div class="header-image-wrapper">
+               <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/HelpHub%20Logo.png" alt="HelpHub Logo" height=100>
+            </div>
+            <div class="nav-wrapper">
+               <nav>
+                  <ul>
+                     <li>
+      <a href="charitieslist.html" class="nav-link-class">CHARITIES LIST</a>
+      </li>
+      <li>
+      <a href="contactus.html" class="nav-link-class">CONTACT US</a>
+      </li>
+      <li>
+      <a href="login.html" class="nav-link-class">LOG IN</a>
+      </li>
+      </ul>
+      </nav>
+      </div>
+      </div>
+      <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/new%20york%20cares.png" alt="Volunteers at New York Cares" width=100%>
+      <div class="margins">
+         <div class="text-class">
+            <br>
+            <p>We provide year-round volunteer opportunities for New Yorkers like you. Projects take place across the city in the following areas:</p>
+            <ul>
+               <li>Educating children, teens, and adults</li>
+               <li>Serving those impacted by hunger and homelessness</li>
+               <li>Health and wellness for seniors and other vulnerable groups</li>
+               <li>Caring for public parks, community gardens, and green spaces</li>
+            </ul>
+            <br>
+            <div class="slideshow-container">
+               <div class="mySlides fade">
+                  <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/newyorkcares1.png" style="width:100%" alt="Volunteer distributing food">
+               </div>
+               <div class="mySlides fade">
+                  <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/newyorkcares2.jpg" style="width:100%" alt="Volunteers preparing meals">
+               </div>
+               <div class="mySlides fade">
+                  <img src="https://raw.githubusercontent.com/hannahmarkinLU/helphub_images/refs/heads/main/newyorkcares3.jpg" style="width:100%" alt="Volunteer fitting a child for a donated coat">
+               </div>
+               <a class="prev" onclick="plusSlides(-1)">❮</a>
+               <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+               <span class="dot"></span> 
+               <span class="dot"></span> 
+               <span class="dot"></span> 
+            </div>
+            <h1 class="center header-margins">Available Volunteer Opportunities</h1>
+            <h3>
+               Distribute Food to the Community
+            </h3>
+            <p>Hand out bags of healthy food and fresh produce to customers on the sidewalk of 86th street. This is a customer facing role that takes place outside rain or shine. Volunteers should feel comfortable working on their feet and lift up to 15 pounds.</p>
+            <h3>
+               Support Jobseekers
+            </h3>
+            <p>Prepare and perfect resumes with jobseekers at an agency dedicated to providing immediate, comprehensive and effective employment services for men and women returning from incarceration.</p>
+            <h3>
+               Learn and Practice SEL with Students
+            </h3>
+            <p>Engage students in their journey to becoming more productive, self-aware, and socially-aware individuals in and out of the classroom. Work with 3rd grade students in small groups to increase their competence in core social-emotional learning skills such as self-awareness, self-management, social awareness, relationship skills, and responsible decision making through a SEL curriculum and activities.</p>
+            <div class="button-container">
+               <button id="volunteer-btn" class="volunteer-now">Volunteer Now!</button>
+            </div>
+         </div>
+      </div>
+      <footer class="footer-class">
+         <p>©2025 by HelpHub. All rights reserved.</p>
+      </footer>
+      <div id="volunteer-modal" class="modal">
+         <div class="modal-content">
+            <h3>Join Habitat LA's Team</h3>
+            <form id="volunteer-form">
+               <input type="name" id="name" name="name" class="form-input" placeholder="Your Name">
+               <input type="email" id="email" name="email" class="form-input" placeholder="Email">
+               <select class="volunteer-form-input">
+                  <option value="">Interested in...</option>
+                  <option>Distribute Food to the Community</option>
+                  <option>Support Jobseekers</option>
+                  <option>Learn and Practice SEL with Students</option>
+               </select>
+               <input type="submit" value="Submit" class="form-submit">
+            </form>
+         </div>
+      </div>
+      <a href="javascript:history.back()" class="back-arrow" aria-label="Go back">
+      <i class="fas fa-arrow-left"></i>
+      </a>
+      <script src="helphub.js"></script>
+   </body>
+</html>
